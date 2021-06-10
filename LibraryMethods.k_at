@@ -1,0 +1,25 @@
+//lib work similar as "namespaces"
+lib Library.Additions
+{
+    //By default, library methods are open and global.
+
+    method<Int> Add(Int a, Int b)
+    {
+        ret a + b;
+    }
+
+    //You can overload same method name with different parameters
+    method<Dec> Add(Dec a, Dec b)
+    {
+        ret a + b;
+    }
+}
+
+//This is illegal, library methods need to exists inside a library
+method Add(Int a, Int b) { }
+
+//This is legal as it defines a library
+lib Library.Additions method<Dec> Multiply(Dec a, Dec b) 
+{
+     ret a * b; 
+}

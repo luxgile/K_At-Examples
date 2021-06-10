@@ -1,3 +1,7 @@
+use Runtime.Debugging;
+
+lib Examples;
+
 method Main()
 {
     Debug.Log("Hello World");

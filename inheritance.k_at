@@ -1,4 +1,11 @@
 //A "design" is a class that cannot be instantiated
+
+//This class is illegal since it exists outside a library.
+class IllegalClass() { }
+
+lib Examples;
+
+//Here, using open is redundant as all classes are open by default.
 open design BaseClass
 {
     open Int value;
@@ -18,7 +25,7 @@ open class DerivedClass : BaseClass
         ret value;
     }
 
-    //This is how you override a method. It's need to specify "lock", "should" or "mush" to it.
+    //This is how you override a method. It's need to specify "lock", "should" or "must" to it.
     //"lock" cannot be inherited anymore.
     //"should" could be inherited.
     //"must" has to be inherited.
@@ -30,6 +37,7 @@ open class DerivedClass : BaseClass
 }
 
 //"must" represents that the definitions of the tag need to be defined.
+//A "tag" is a design that cannot contain fields.
 open tag A
 {
     must method<String> Print();
