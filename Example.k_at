@@ -1,0 +1,50 @@
+
+libscope Examples;
+
+class Console 
+{
+    open method Log(Object s) 
+    {
+        //This is a comment.
+        //Here should implement stuff to log output.
+    }
+
+    //This is a closed method, cannot be accesed from outside.
+    closed method ClosedMethod() { }
+}
+
+class Person
+{
+    String name;
+    Int age;
+
+    open method<Int> GetAge()
+    {
+        ret age;
+    }
+}
+
+method Main() 
+{
+    //Some arithmetic shit
+    Int a = 10;
+    Int b = 3;
+    Dec c = 4.5;
+    Console console = ();
+    console.Log(a + b);
+
+    //Pointer fanciness
+    //Access to pointers are the same as normal objects.
+    Person* person = alloc();
+    person.name = "Bob";
+    person.age = 32;
+
+    //Conditions
+    if(person.age great or equal 18)
+    {
+        console.Log(person.name + " is an adult.");
+    }
+
+    //Free allocated pointer
+    free person;
+}

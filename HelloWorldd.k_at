@@ -1,6 +1,6 @@
 use Runtime.Debugging;
 
-lib Examples;
+libscope Examples;
 
 method Main()
 {

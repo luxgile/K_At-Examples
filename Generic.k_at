@@ -1,0 +1,11 @@
+libscope Examples;
+
+//Generic example
+generic T;
+class List<T>
+{
+    open method<T> Get(Int index)
+    {
+        
+    }
+} 

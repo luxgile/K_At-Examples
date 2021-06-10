@@ -1,7 +1,7 @@
 //By default, classes are always open and can't be closed unless they are nested.
 
 //Libraries can be defined like this to scope all the file.
-lib Examples;
+libscope Examples;
 
 class AccessExample
 {

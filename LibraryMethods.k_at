@@ -1,5 +1,5 @@
 //lib work similar as "namespaces"
-lib Library.Additions
+libscope Library.Additions
 {
     //By default, library methods are open and global.
 
@@ -19,7 +19,7 @@ lib Library.Additions
 method Add(Int a, Int b) { }
 
 //This is legal as it defines a library
-lib Library.Additions method<Dec> Multiply(Dec a, Dec b) 
+libscope Library.Additions method<Dec> Multiply(Dec a, Dec b) 
 {
      ret a * b; 
 }

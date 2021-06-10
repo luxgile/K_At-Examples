@@ -3,7 +3,7 @@
 //This class is illegal since it exists outside a library.
 class IllegalClass() { }
 
-lib Examples;
+libscope Examples;
 
 //Here, using open is redundant as all classes are open by default.
 open design BaseClass
