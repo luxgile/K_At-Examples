@@ -33,11 +33,13 @@ method Main()
     Console console = ();
     console.Log(a + b);
 
+    Bool b1 = true;
+    Bool b2 = not b1;
+
     //Pointer fanciness
-    //Access to pointers are the same as normal objects.
     Person* person = alloc();
-    person.name = "Bob";
-    person.age = 32;
+    person..name = "Bob";
+    person..age = 32;
 
     //Conditions
     if(person.age great or equal 18)
