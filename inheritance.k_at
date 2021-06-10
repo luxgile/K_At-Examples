@@ -1,0 +1,46 @@
+//A "design" is a class that cannot be instantiated
+open design BaseClass
+{
+    open Int value;
+
+    open should method SetValue(Int newValue)
+    {
+        value = newValue;
+    }
+}
+
+//Inheritance works similar as other languages
+open class DerivedClass : BaseClass
+{
+    open method<Int> GetValue()
+    {
+        //You can access base fields with no issues.
+        ret value;
+    }
+
+    //This is how you override a method. It's need to specify "lock", "should" or "mush" to it.
+    //"lock" cannot be inherited anymore.
+    //"should" could be inherited.
+    //"must" has to be inherited.
+    open lock BaseClass:method SetValue(Int newValue)
+    {
+        if(value is not newValue)
+            base.SetValue(newValue);
+    }
+}
+
+//"must" represents that the definitions of the tag need to be defined.
+open tag A
+{
+    must method<String> Print();
+    should method<string> GetString() { }
+}
+
+//Implementation of a "tag"
+open class B : A
+{
+    open A:method<String> Print()
+    {
+
+    }
+}

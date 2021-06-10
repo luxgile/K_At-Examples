@@ -1,0 +1,4 @@
+method Main()
+{
+    Debug.Log("Hello World");
+}
