@@ -43,13 +43,12 @@ method Main()
     person..age = 32;
 
     //Conditions
-    if(person.age great or equal 18)
+    if(person.age great or equals 18)
     {
         console.Log(person.name + " is an adult.");
     }
 
-    //"Equals" is used on numbers, "Is" is used on booleans
-    if(person.isMale is true)
+    if(person.isMale equals true)
     {
 
     }
