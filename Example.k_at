@@ -17,6 +17,7 @@ class Person
 {
     String name;
     Int age;
+    Bool isMale;
 
     open method<Int> GetAge()
     {
@@ -45,6 +46,12 @@ method Main()
     if(person.age great or equal 18)
     {
         console.Log(person.name + " is an adult.");
+    }
+
+    //"Equals" is used on numbers, "Is" is used on booleans
+    if(person.isMale is true)
+    {
+
     }
 
     //Free allocated pointer
