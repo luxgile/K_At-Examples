@@ -1,0 +1,29 @@
+libscope Examples;
+
+method Main()
+{
+    Int[5] array = ();
+    Int[]* arrayP = &array;
+    array[3] = 5;
+    arrayP[3] = 5;
+
+    //Equivalent to while(true) {}
+    @(true){ }
+    @s(true){ }
+    @a(true){ }
+
+    //Equivalent to for from 0 to 100
+    @(0, 100){ }
+    @(0, 100, int index){ }
+
+    //An array can be added
+    @(array, int* element) { }
+
+    //Pointer with a count as well
+    @(arrayP, array.count, int* element) { }
+
+    @(array, int* element)
+    {
+        element = 5;
+    }
+}

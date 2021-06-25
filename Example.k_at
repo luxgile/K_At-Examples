@@ -54,5 +54,5 @@ method Main()
     }
 
     //Free allocated pointer
-    free person;
+    free(person);
 }

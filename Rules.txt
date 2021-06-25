@@ -7,3 +7,19 @@ K@ pronounced "cat", can be typed as well as K_At
 
 2. Avoid Nulls
 3. Choose if stack or heap
+4. Pointers cannot be modified
+    4.1 No offseting with ++ --
+    4.2 No changing address of a defined pointer
+    4.3 Pointers always need to point to something, you cannot declare a pointer from nowhere.
+    4.4 Since you cannot modify them, assigning to a pointer will give the value to the value of the pointer
+        {
+            Int i = 5;
+            Int* i_pointer = &i;
+            i_pointer = 2;
+            
+            Person person = ();
+            Person* person_pointer = &person;
+            //Here, "person" now is a new object.
+            person_pointer = ("Ben", 15);
+        }
+5. All code must be inside a library.
